@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KODI100</title>
+<meta name="theme-color" content="#0f1720">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="login" hidden>
+  <form id="lg_form" autocomplete="off">
+    <div class="logo">▲</div>
+    <h1>KODI100</h1>
+    <p class="sub">Base AYGA</p>
+    <label>Username <input id="lg_name" maxlength="24" autocomplete="off"></label>
+    <label>Password <input id="lg_pin" type="password" autocomplete="off"></label>
+    <button id="lg_go" class="pri" type="submit">Log in</button>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header><a href="#/roster" class="brand"><span>▲</span> KODI100 <small>AYGA</small></a>
+    <div class="usr"><span id="who"></span><button id="logout" class="sm">Log out</button></div></header>
+  <main id="view"></main>
+  <nav id="nav">
+    <a data-r="roster" href="#/roster">Roster</a><a data-r="map" href="#/map">Map</a><a data-r="set" href="#/set">Settings</a>
+  </nav>
+</div>
+<div id="toast" role="status"></div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="lib.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
